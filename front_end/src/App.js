@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useState } from 'react';
 import ReactMapGL from 'react-map-gl';
+import MenuBar from './menu_bar/MenuBar.jsx'
+import './App.css'
 
 function App() {
   const [viewport, setViewport] = useState({
@@ -11,11 +13,14 @@ function App() {
     zoom: 11
   });
   return (
-    <ReactMapGL
-      {...viewport}
-      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
-      onViewportChange={nextViewport => setViewport(nextViewport)}
-    />
+    <div>
+      <MenuBar/>
+      <ReactMapGL
+        {...viewport}
+        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
+        onViewportChange={nextViewport => setViewport(nextViewport)}
+      />
+    </div>
   );
 }
 

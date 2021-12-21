@@ -1,0 +1,9 @@
+:root {
+    --primColor: #dcdcdc;
+    --secoColor: #555555;
+    --cornerRad: 4px;
+}
+
+ReactMapGL {
+    z-index: 0;
+}
