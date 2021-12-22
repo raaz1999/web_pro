@@ -10,11 +10,12 @@ class MenuBar extends React.Component{
             <details>
             <summary></summary>
                 <nav class="menu">
-                    <a href="#link">Home</a>
-                    <a href="#link">Work</a>
-                    <a href="#link">Links</a>
-                    <a href="#link">Contact</a>
-                    <a href="#link">About</a>
+                    <a href="#link">Bars</a>
+                    <a href="#link">Restaurant</a>
+                    <a href="#link">Musée</a>
+                    <a href="#link">Endroit exotique</a>
+                    <a href="#link">Parc attraction</a>
+                    <a href="">....</a>
                 </nav>
             </details>
         </div>);
