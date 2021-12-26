@@ -1,0 +1,74 @@
+
+
+
+.LoginContainer {
+    width: 300px;
+    height: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(219, 208, 208);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .LoginCancel {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    cursor: pointer;
+  }
+  
+  .logo {
+    font-family: 'Kaushan Script';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: 700;
+    
+  }
+  
+  .LoginBtn {
+    border: none;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(142, 192, 226);
+    cursor: pointer;
+  }
+  
+  .success {
+    font-size: 12px;
+    color: green;
+    text-align: center;
+  }
+  
+  .failure {
+    font-size: 12px;
+    color: red;
+    text-align: center;
+  }
+  
+  .LoginInput{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  
+  input .LoginInput{
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }

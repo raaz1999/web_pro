@@ -1,6 +1,6 @@
 import React from "react";
 import './menu.css'
-
+import {Room} from "@material-ui/icons"
 
 class MenuBar extends React.Component{
     render(){
@@ -10,12 +10,12 @@ class MenuBar extends React.Component{
             <details>
             <summary></summary>
                 <nav class="menu">
-                    <a href="#link">Bars</a>
-                    <a href="#link">Restaurant</a>
-                    <a href="#link">Musée</a>
-                    <a href="#link">Endroit exotique</a>
-                    <a href="#link">Parc attraction</a>
-                    <a href="">....</a>
+                    <a>Bars</a>
+                    <a>Restaurant</a>
+                    <a>Musée</a>
+                    <a>Endroit exotique</a>
+                    <a>Parc attraction</a>
+                    <a>....</a>
                 </nav>
             </details>
         </div>);

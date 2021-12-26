@@ -3,10 +3,10 @@
     margin: 40px;
   }
   .MenuBar summary{
-    writing-mode: vertical-lr;
+    writing-mode: horizontal-tb;
     text-align: center;
     padding: 12px 10px;
-    width: 23px;
+    width:45px;
     height: 17px;
     background-color: var(--primColor);
     border: 2px solid var(--secoColor);
@@ -27,7 +27,8 @@
     content: "";
   }
   .MenuBar summary::after {
-    content: "III";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    content: "Places";
     letter-spacing: -1px;
   }
   .MenuBar summary:hover {
@@ -80,7 +81,7 @@
     filter: brightness(200%);
   }
   .MenuBar details::before {
-    content: "← Click This Button";
+    content: "";
     color: var(--secoColor);
     position: absolute;
     margin-left: 80px;

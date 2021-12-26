@@ -1,9 +1,57 @@
+@font-face{
+    font-family: 'Kaushan Script';
+    src: url('./KaushanScript-Regular.otf');
+}
+
+
 :root {
     --primColor: #dcdcdc;
     --secoColor: #555555;
     --cornerRad: 4px;
 }
 
-ReactMapGL {
-    z-index: 0;
+.LoginButton{
+    border: 2px solid var(--secoColor);
+    border-radius: var(--cornerRad);
+    color: var(--secoColor);
+    background-color: var(--primColor);
+   
+    writing-mode: horizontal-tb;
+    text-align: center;
+    padding: 12px 10px;
+}
+
+.LoginButton:active{
+    color : white;
+    background-color: rgb(86, 241, 55);
+    border-radius: 4px;
+    
+    
+}
+
+.RegisterButton{
+    border: 2px solid var(--secoColor);
+    border-radius: var(--cornerRad);
+    color: var(--secoColor);
+    background-color: var(--primColor);
+    
+    margin-left:5px;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    padding: 12px 10px;
+}
+
+
+.RegisterButton:active{
+    color : white;
+    background-color: rgb(238, 206, 66);
+    border-radius: 4px;
+    margin-left:5px;
+}
+
+.notconnected{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    margin-top: 40px;
 }
