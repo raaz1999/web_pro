@@ -1,8 +1,14 @@
 import React from "react";
 import "./login.css";
-import {Room} from "@material-ui/icons";
+import {Cancel} from "@material-ui/icons";
 
 class Login extends React.Component {
+
+
+    constructor(props){
+        super(props)
+    }
+
     render(){
         return(
             <div className="LoginContainer">
@@ -20,7 +26,10 @@ class Login extends React.Component {
                 <button className="LoginBtn" type="submit">
                         Login
                 </button>
-                
+                <Cancel
+                className="registerCancel"
+                onClick={() => this.props.setopenLogin(false)}
+                />
            </div>
         )
     }

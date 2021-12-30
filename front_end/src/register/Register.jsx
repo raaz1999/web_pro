@@ -1,8 +1,15 @@
 import React from "react";
 import "./register.css";
-import {Room} from "@material-ui/icons";
+import {Cancel} from "@material-ui/icons";
 
 class Register extends React.Component {
+
+
+    constructor(props){
+        super(props)
+    }
+
+
     render(){
         return(
             <div className="registerContainer">
@@ -21,7 +28,10 @@ class Register extends React.Component {
                 <button className="registerBtn" type="submit">
                         Register
                 </button>
-                
+                <Cancel
+                className="registerCancel"
+                onClick={() => this.props.setopenRegister(false)}
+                />
            </div>
         )
     }

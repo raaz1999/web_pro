@@ -16,8 +16,6 @@ function App() {
   const [currentUser, setCurrentUser]=useState(null);
 
   const [openRegister, setopenRegister]=useState(false);
-
-
   const [openLogin, setopenLogin]=useState(false);
 
   return (
@@ -29,8 +27,10 @@ function App() {
         height="100%"
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
         onViewportChange={nextViewport => setViewport(nextViewport)}
+       mapStyle="mapbox://styles/mapbox/dark-v10"
         >
         <MenuBar/>
+
 
         {currentUser? ( <button className='LogoutButton' >Logout</button>)
         :( 
@@ -43,7 +43,6 @@ function App() {
 
         {openRegister && (<Register setopenRegister={setopenRegister} />)}
         {openLogin && (<Login setopenLogin={setopenLogin} />)}
-       
        
       </ReactMapGL>
     </div>
