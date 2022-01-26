@@ -15,31 +15,25 @@ class Places extends React.Component {
 			'place': null,
       'currentplace':null
 		}
-    
-   
   }
 
   async data_place(){
     try{
       await axios.get("http://localhost:4000/place/get_place").then((res)=>{
-        console.log(res)
         this.setState({
           'place': res.data.data,
           'currentplace':null
         })
-
-        console.log(this.state.place)
       })
-      
     }catch(err){
       console.log(err)
     }
   } 
 
   componentWillMount(){
-    this.data_place()
-    console.log("her")
-    console.log(this.state.place)
+    this.data_place().then(()=>{
+      console.log(this.state.place)
+    })
   }
 
   handelchangepl(id){
@@ -52,18 +46,15 @@ class Places extends React.Component {
   render(){
     
     return(
-      <>{this.state.place && this.state.place.map((x,_id)=>{
+      <>{this.state.place && this.state.place.map((x)=>{
         
         try{
           
-      
 
-        return(<>
-
-
-        {this.state.currentplace===x._id &&(
+        return(<div key={x._id}>
+          {this.state.currentplace===x._id &&(
         <Popup 
-       
+        key={x._id}
         latitude={x.latitude}
         longitude={x.longitude}
         closeButton={true}
@@ -75,21 +66,23 @@ class Places extends React.Component {
           'currentplace': null
         })}}
         >
-          
+                  <label>crée par :</label>
+                  <h4 className="place">{x.made}</h4>
                   <label>adresse :</label>
                   <h4 className="place">{x.adresse}</h4>
                   <label>nom :</label>
-                  <p className="desc">{x.name}</p>
+                  <p className="desc">{x.Name}</p>
                   <label>note :</label>
                   <p>
                   <div className="stars">
                       {Array(parseInt(x.note)).fill(<Star />)}
                   </div>
                   </p>
+                  <label>Date d'enregistrement de la donnée  :</label>
+                  <p><span className="date">{format(x.date)}</span></p>
 
         </Popup>)}
-        <Marker
-              key={x._id}
+          <Marker
               latitude={x.latitude}
               longitude={x.longitude}
               offsetLeft={-11 }
@@ -109,11 +102,9 @@ class Places extends React.Component {
               />
         </Marker>
 
-      
-        </>
+        </div>
+          
         )
-
-
         }catch(err){}
       
       })}</>

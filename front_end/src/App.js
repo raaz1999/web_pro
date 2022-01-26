@@ -37,6 +37,7 @@ function App()  {
   const handel_submit= async (e) => {
     e.preventDefault();
     const newPlace = {
+      madeby: currentUser,
       username: name,
       adr: adresse,
       rating: star,
@@ -48,7 +49,7 @@ function App()  {
     
     try {
       const res = await axios.post("http://localhost:4000/place/newplace", newPlace);
-
+      setNewPlace(null)
     } catch (err) {
       console.log(err);
     }

@@ -49,9 +49,9 @@ function init(){
         
         try{
            
-            const {username,adr,rating,lat,long}=req.body 
+            const {madeby,username,adr,rating,lat,long}=req.body 
 
-            if(!username && !adr && !rating && !lat && !long){
+            if(!username && !adr && !rating && !lat && !long && !madeby){
 
                 res.status(400).json({
                 
@@ -64,7 +64,7 @@ function init(){
                 return;
             }
             
-            if(await place.insert(username,adr,rating,lat,long)){
+            if(await place.insert(username,adr,rating,lat,long,madeby)){
 
                 res.status(200).json({
                     status:201,
@@ -102,13 +102,10 @@ function init(){
         }catch(err){
             
             res.status(500).json({
-               
+
                 status: 500,
-               
                 message: "erreur interne",
                
-               
-            
             })
          }
  

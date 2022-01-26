@@ -12,7 +12,7 @@ class plc{
 
 
 
-    insert(username,adr,rating,lat,long){
+    insert(username,adr,rating,lat,long,madeby){
 
         return new Promise((resolve,reject)=>{
 
@@ -28,12 +28,12 @@ class plc{
                     console.log(doc);
 
                     this.db.insert({
-                        
+                        made:madeby,
                         Name: username,
                         adresse : adr,
                         note: rating,
                         latitude : lat,
-                        longitute: long,
+                        longitude: long,
                         date: new Date()
 
                     },(err)=> {

@@ -13,16 +13,13 @@ class MenuBar extends React.Component{
         
         return(
         <div className="MenuBar">
-                 <details>
-            <summary></summary>
+            <details>
+                <summary></summary>
                 <nav className="menu">
-                <a onClick={()=>{this.props.setCurrentPlace("Restaurant")}}>Restaurant</a>
-                <a onClick={()=>{this.props.setCurrentPlace("eve")}}>Evenement</a>
-                <a onClick={()=>{this.props.setCurrentPlace("user_place")}}>user_place</a>
-                <a onClick={()=>{this.props.setCurrentPlace("Endroit_exotique")}}>Endroit exotique</a>
-                <a onClick={()=>{this.props.setCurrentPlace("Parc")}}>Parc attraction</a>
-                <a onClick={()=>{this.props.setCurrentPlace("All")}}>all</a>   
-                   
+                    <a onClick={()=>{this.props.setCurrentPlace("Restaurant")}}>Restaurant</a>
+                    <a onClick={()=>{this.props.setCurrentPlace("eve")}}>Evenement</a>
+                    <a onClick={()=>{this.props.setCurrentPlace("user_place")}}>user_place</a>
+                    <a onClick={()=>{this.props.setCurrentPlace("")}}>enlever les markeurs</a>
                 </nav>
             </details>
         </div>);

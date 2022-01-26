@@ -33,8 +33,6 @@ function init(){
         next();
     });
 
-
-
     router.get("/getRestaurant", async(req,res)=>{
         /*
         récuperer les message de tes amis
