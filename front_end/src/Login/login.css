@@ -6,12 +6,13 @@
     height: 250px;
     padding: 20px;
     border-radius: 10px;
-    background-color: rgb(219, 208, 208);
+    background-color: white;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 5;
     margin: auto;
     display: flex;
     flex-direction: column;

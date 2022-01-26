@@ -41,6 +41,22 @@
     padding: 12px 10px;
 }
 
+.LogoutButton{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    margin-top: 40px;
+    border: 2px solid var(--secoColor);
+    border-radius: var(--cornerRad);
+    color: var(--secoColor);
+    background-color: var(--primColor);
+    
+    margin-left:5px;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    padding: 12px 10px;
+}
+
 
 .RegisterButton:active{
     color : white;
@@ -54,4 +70,23 @@
     top: 10px;
     right: 20px;
     margin-top: 40px;
+}
+
+.box{
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    margin-top: 4px;
+    line-height: 0.1;
+}
+label{
+    color: royalblue;
+    font-family: "Gill Sans", sans-serif;;
+}
+
+
+Marker{
+    z-index: 1;
 }
