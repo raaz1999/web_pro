@@ -110,12 +110,12 @@ function init(){
 
     router.post("/login", async(req,res)=>{
 
-        const {name, password}=req.body    //recupérer l'email et le password du body    
+        const {name, password}=req.body    //recupérer l'email et le nom du body    
         
 
 
         try{
-        const data=await user.existsuser(name,password) // si l'utilisateur a entré les bons identifiant on lui crée sa session 
+        const data=await user.existsuser(name,password) 
             
             
 

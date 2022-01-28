@@ -34,9 +34,7 @@ function init(){
     });
 
     router.get("/getRestaurant", async(req,res)=>{
-        /*
-        récuperer les message de tes amis
-        */
+       
        const resto=loadUser()
 
        

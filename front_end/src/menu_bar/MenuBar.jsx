@@ -16,9 +16,9 @@ class MenuBar extends React.Component{
             <details>
                 <summary></summary>
                 <nav className="menu">
-                    <a onClick={()=>{this.props.setCurrentPlace("Restaurant")}}>Restaurant</a>
-                    <a onClick={()=>{this.props.setCurrentPlace("eve")}}>Evenement</a>
-                    <a onClick={()=>{this.props.setCurrentPlace("user_place")}}>user_place</a>
+                    <a onClick={()=>{this.props.setCurrentPlace("Restaurant")}}>Restaurant(nodejs json database)</a>
+                    <a onClick={()=>{this.props.setCurrentPlace("eve")}}>Evenement(api exterieur)</a>
+                    <a onClick={()=>{this.props.setCurrentPlace("user_place")}}>user_place(nodejs nosql)</a>
                     <a onClick={()=>{this.props.setCurrentPlace("")}}>enlever les markeurs</a>
                 </nav>
             </details>
