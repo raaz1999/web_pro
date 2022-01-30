@@ -1,6 +1,6 @@
 #Comment executer le projet;
 
-##si vous utiliser votre propre environement :
+##si vous utilisez votre propre environement :
 
     pour frontend:
 
@@ -43,5 +43,5 @@
 
 
 
-la méthode qui prend moins de temp : Docker 
+la méthode qui prend moins de temps : Docker 
         
