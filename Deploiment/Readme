@@ -1,0 +1,25 @@
+Avant de commencer vous devez installer Minikube et kubectl 
+puis proceder a éxécuter les commandes suivantes :
+
+
+    Démarer le premier terminal:
+        
+        installer minikube :
+
+        sudo mkdir -p /usr/local/bin/
+        sudo install minikube /usr/local/bin/
+
+        Aller au au dossier deploiment : 
+
+        cd Deploiment 
+        kubectl -f apply backend.yaml
+        kubectl -f apply frontend.yaml
+
+        kubectl port-forward svc svc/map-frontend-srv 4000:4000
+
+    Dans le deuxième terminal :
+        minikube service map-frontend-srv
+
+
+Amélioration possible : 
+1-utiliser ingress a la place d'utiliser la commande  kubectl port-forward svc svc/map-frontend-srv 4000:4000
