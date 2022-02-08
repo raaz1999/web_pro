@@ -1,6 +1,6 @@
-#Comment executer le projet;
+# Comment executer le projet;
 
-##si vous utilisez votre propre environement :
+## si vous utilisez votre propre environement :
 
     pour frontend:
 
@@ -13,7 +13,7 @@
     yarn install
 
 
-##par Docker : 
+## par Docker : 
 
     docker pull raaz199/map_frontend:1.0
     docker pull raaz199/map_backend:1.0
@@ -21,7 +21,7 @@
     docker run --publish 3000:3000 raaz199\map_frontend:1.0
     docker run --publish 4000:4000 raaz199\map_backend:1.0
 
-##par minikube :
+## par minikube :
 
     ###Démarer le premier terminal:
         
